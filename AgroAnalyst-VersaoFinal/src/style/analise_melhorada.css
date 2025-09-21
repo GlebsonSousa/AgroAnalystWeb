@@ -1,0 +1,386 @@
+/* CSS Adicional para Análise de Solo Melhorada */
+
+/* Mapa Interativo */
+.mapa-container {
+    width: 100%;
+    margin: 3rem 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.mapa-container h3 {
+    font-family: Barrio;
+    color: #034C1B;
+    font-size: 24px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#mapa-interativo {
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #056F33;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#coordenadas-info {
+    margin-top: 1rem;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #056F33;
+}
+
+#coordenadas-info p {
+    font-family: Barrio;
+    color: #034C1B;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #056F33;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner p {
+    font-family: Barrio;
+    color: #056F33;
+    font-size: 16px;
+}
+
+/* Análise Econômica */
+.analise-economica {
+    width: 100%;
+    margin: 4rem 0;
+    background: linear-gradient(135deg, rgba(5, 111, 51, 0.05), rgba(255, 209, 20, 0.05));
+    border-radius: 20px;
+    padding: 3rem;
+    border: 1px solid rgba(5, 111, 51, 0.2);
+}
+
+.analise-economica h2 {
+    font-family: Barrio;
+    color: #034C1B;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.analise-economica p {
+    font-family: marry;
+    color: #515150;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Cards de Culturas Econômicas */
+.culturas-economicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.cultura-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-left: 5px solid #056F33;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cultura-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.cultura-card.rank-1 {
+    border-left-color: #FFD700;
+    background: linear-gradient(135deg, #fff, #fffbf0);
+}
+
+.cultura-card.rank-2 {
+    border-left-color: #C0C0C0;
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+}
+
+.cultura-card.rank-3 {
+    border-left-color: #CD7F32;
+    background: linear-gradient(135deg, #fff, #fdf8f5);
+}
+
+.cultura-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.cultura-nome {
+    font-family: Barrio;
+    font-size: 24px;
+    color: #034C1B;
+    margin: 0;
+}
+
+.cultura-rank {
+    background: #056F33;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.rank-1 .cultura-rank { background: #FFD700; color: #333; }
+.rank-2 .cultura-rank { background: #C0C0C0; color: #333; }
+.rank-3 .cultura-rank { background: #CD7F32; color: white; }
+
+.cultura-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    font-family: Poppins;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #034C1B;
+}
+
+.info-value.positivo { color: #28a745; }
+.info-value.negativo { color: #dc3545; }
+.info-value.neutro { color: #ffc107; }
+
+.cultura-detalhes {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.tempo-cultivo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-family: Poppins;
+    font-size: 14px;
+    color: #555;
+}
+
+.barra-tempo {
+    flex: 1;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progresso-tempo {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #ffc107, #dc3545);
+    border-radius: 4px;
+}
+
+/* Comparação de Culturas */
+.comparacao-culturas {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.comparacao-culturas h3 {
+    font-family: Barrio;
+    color: #034C1B;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#grafico-rentabilidade {
+    max-height: 400px;
+    width: 100%;
+}
+
+/* Área do Clima */
+.area-clima {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.area-clima h4 {
+    font-family: Barrio;
+    color: #034C1B;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#grafico-clima {
+    max-height: 200px;
+    width: 100%;
+}
+
+/* Calendário Agrícola */
+.calendario-agricola {
+    width: 100%;
+    margin: 4rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.calendario-agricola h2 {
+    font-family: Barrio;
+    color: #034C1B;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#calendario-plantio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.mes-item {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 4px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.mes-item.plantio { border-left-color: #28a745; }
+.mes-item.cuidados { border-left-color: #ffc107; }
+.mes-item.colheita { border-left-color: #fd7e14; }
+
+.mes-nome {
+    font-family: Barrio;
+    font-size: 18px;
+    color: #034C1B;
+    margin-bottom: 0.5rem;
+}
+
+.mes-atividade {
+    font-family: Poppins;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.mes-descricao {
+    font-family: marry;
+    font-size: 12px;
+    color: #888;
+    line-height: 1.4;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .mapa-container {
+        padding: 1rem;
+        margin: 2rem 0;
+    }
+    
+    #mapa-interativo {
+        height: 300px;
+    }
+    
+    .analise-economica {
+        padding: 2rem 1rem;
+        margin: 2rem 0;
+    }
+    
+    .culturas-economicas {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .cultura-card {
+        padding: 1.5rem;
+    }
+    
+    .cultura-info {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    .calendario-agricola {
+        padding: 2rem 1rem;
+        margin: 2rem 0;
+    }
+    
+    #calendario-plantio {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .analise-economica h2 {
+        font-size: 28px;
+    }
+    
+    .cultura-nome {
+        font-size: 20px;
+    }
+    
+    .cultura-rank {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
