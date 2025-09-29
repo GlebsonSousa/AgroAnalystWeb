@@ -7,3 +7,5 @@ Demais arquivos são referentes ao site.
 ---------------------------------------------------------------------------------------
 
 O banco de dados MySql esta hospedado no site "https://console.clever-cloud.com/"
+
+Acessando o aquivo README, é possivel visualizar o banco de dados 
