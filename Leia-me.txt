@@ -1,7 +1,8 @@
 O servidor PHP, esta hospedado no site render.com
 
-Os endpoints foram divididos em arquivos separados de forma que para acessa-los, basta utilizar "https: https://servidor-db-php.onrender.com/teste.php" subistituindo "/teste.php" pela rota desejada.
+Os endpoints foram divididos em arquivos separados de forma que para acessa-los, basta utilizar "https://servidor-db-php.onrender.com/teste.php" substituindo "/teste.php" pela rota desejada.
 
 Demais arquivos são referentes ao site.
+
 
 
